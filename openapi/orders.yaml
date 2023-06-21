@@ -17,10 +17,10 @@ paths:
       tags:
         - order
       x-kong-plugins-kafka:
-         - name: kafka-upstream
-           service: SERVICE_NAME|SERVICE_ID
-           config:
-           topic: TOPIC     
+        enabled: true
+        config:
+          topic: TOPIC          
+              
       responses:
         '200':
           description: Order object
