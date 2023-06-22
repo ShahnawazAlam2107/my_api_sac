@@ -16,7 +16,8 @@ paths:
       summary: Fetches an order
       tags:
         - order
-      plugins:
+      x-kong-plugins:
+        enabled: true
         - name: kafka-upstream
           config:
             topic: TOPIC         
