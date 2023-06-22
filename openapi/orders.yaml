@@ -16,13 +16,12 @@ paths:
       summary: Fetches an order
       tags:
         - order
-      x-kong-plugins:
+      x-kong-plugin-rate-limiting:
         enabled: true
-        service: Pizza_Order_API
-        - name: kafka-upstream
-          config:
-            topic: TOPIC         
-            policy: local  
+        config:
+          minute: 5
+          limit_by: ip
+          policy: local
       responses:
         '200':
           description: Order object
