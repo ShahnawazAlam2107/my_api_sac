@@ -16,10 +16,12 @@ paths:
       summary: Fetches an order
       tags:
         - order
-      x-kong-plugins-kafka:
+      x-kong-plugins-kafka-upstream:
         enabled: true
-        config:
-          topic: TOPIC          
+        - name: kafka-upstream
+          service: Pizza_Order_API
+          config:
+            topic: TOPIC         
               
       responses:
         '200':
