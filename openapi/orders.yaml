@@ -21,11 +21,8 @@ paths:
         service: Pizza_Order_API
         - name: kafka-upstream
           config:
-            bootstrap_servers:
-              host: http://16.16.254.147
-              port: 8002
             topic: TOPIC         
-              
+            policy: local  
       responses:
         '200':
           description: Order object
