@@ -22,6 +22,11 @@ paths:
           minute: 5
           limit_by: ip
           policy: local
+      x-kong-plugin-kafka-upstream:
+        enabled: true
+        service: Pizza_Order_API
+        config:
+          topic: TOPIC    
       responses:
         '200':
           description: Order object
