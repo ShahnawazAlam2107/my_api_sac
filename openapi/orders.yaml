@@ -22,7 +22,7 @@ paths:
           config:
             bootstrap_servers:
               host: http://16.16.254.147
-              port: 9092
+              port: 8002
             topic: TOPIC         
               
       responses:
