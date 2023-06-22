@@ -20,6 +20,9 @@ paths:
         enabled: true
         - name: kafka-upstream
           config:
+            bootstrap_servers:
+              host: http://16.16.254.147
+              port: 9092
             topic: TOPIC         
               
       responses:
