@@ -18,6 +18,7 @@ paths:
         - order
       x-kong-plugins:
         enabled: true
+        service: Pizza_Order_API
         - name: kafka-upstream
           config:
             bootstrap_servers:
